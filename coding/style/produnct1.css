@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+#ProductBody{
+    border: 2px solid red;
+    /* width:90%; */
+    display: flex;
+}
+
+#product{
+    border: 2px solid ;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 32px;
+    padding: 32px;
+}
+#product>div{
+    border: 2px solid ;
+    text-align: center;
+    padding: 12px;
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr); */
+    
+}
+.card>img{
+    /* border: 2px solid ; */
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr); */
+    
+}
+#buy{
+    margin: 12px;
+}
+
+#foot{
+    border: 2px solid;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 12px;
+}
+
+.hidden{
+    display: none;
+}
+.hidden:target {
+    display: block;
+  }
