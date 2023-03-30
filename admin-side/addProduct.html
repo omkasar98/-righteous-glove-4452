@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Product</title>
+  <style>
+    .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-container {
+  width: 30%;
+  padding: 20px;
+  margin-right: 20px;
+  background-color: #f5f5f5;
+}
+
+.form-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+}
+
+.card {
+  width: calc(50% - 10px);
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px;
+}
+
+.card p {
+  margin: 10px;
+}
+
+.card button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.card button:hover {
+  background-color: #45a049;
+}
+
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="form-container">
+      <h2>Add Product Form</h2>
+      <form id="add_product_form">
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="description">Product Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" min="0" step="0.01" required>
+        <br>
+        <label for="image">Image URL:</label>
+        <input type="text" id="image" name="image" required>
+        <br>
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
+    <div class="card-container"></div>
+  </div>
+  
+  
+  <script>
+    const form = document.querySelector('#add_product_form');
+const cardContainer = document.querySelector('.card-container');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // prevent default form submission behavior
+
+  const data = {
+    name: form.elements.name.value,
+    description: form.elements.description.value,
+    price: form.elements.price.value,
+    image: form.elements.image.value
+  };
+  console.log(data)
+
+  // make a POST request to the API with the form data
+  fetch('http://localhost:3000/products', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(product => {
+    console.log(product)
+    // add the new product to the card container
+    const card = document.createElement('div');
+    card.classList.add('card');
+
+    const image = document.createElement('img');
+    image.src = product.image;
+    card.appendChild(image);
+
+    const name = document.createElement('h3');
+    name.textContent = product.name;
+    card.appendChild(name);
+
+    const description = document.createElement('p');
+    description.textContent = product.description;
+    card.appendChild(description);
+
+    const price = document.createElement('p');
+    price.textContent = '$' + product.price.toFixed(2);
+    card.appendChild(price);
+
+    const button = document.createElement('button');
+    button.textContent = 'Add to Cart';
+    card.appendChild(button);
+
+    cardContainer.appendChild(card);
+  })
+  .catch(error => console.error(error));
+
+  form.reset(); // clear the form fields
+});
+
+  </script>
+</body>
+</html>
