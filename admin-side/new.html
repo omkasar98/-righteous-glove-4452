@@ -7,6 +7,7 @@
     <title>Admin Panel</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.
 css"/>
+
 <link rel="stylesheet" href="new.css">
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
@@ -110,119 +111,51 @@ css"/>
 
                     <td class="edit"><a href="#">Edit</a></td>
                 </tr>
-                <tr>
-                    <td class="people">
-                        <img src="" alt="">
-                        <div class="people-de">
-                            <h5>Vamsi Karri</h5>
-                            <p>dummy@gmail.com</p>
-                        </div>
-                    </td>
+               
+               
 
-                    <td class="people-des">
-                        <h5>Devloper</h5>
-                        <p>Full-Stack</p>
-                    </td>
-
-                    <td class="active">
-                        <p>Active</p>
-                    </td>
-                    <td class="role">Owner</td>
-
-                    <td class="edit"><a href="#">Edit</a></td>
-                </tr>
-                <tr>
-                    <td class="people">
-                        <img src="" alt="">
-                        <div class="people-de">
-                            <h5>Vamsi Karri</h5>
-                            <p>dummy@gmail.com</p>
-                        </div>
-                    </td>
-
-                    <td class="people-des">
-                        <h5>Devloper</h5>
-                        <p>Full-Stack</p>
-                    </td>
-
-                    <td class="active">
-                        <p>Active</p>
-                    </td>
-                    <td class="role">Owner</td>
-
-                    <td class="edit"><a href="#">Edit</a></td>
-                </tr>
-                <tr>
-                    <td class="people">
-                        <img src="" alt="">
-                        <div class="people-de">
-                            <h5>Vamsi Karri</h5>
-                            <p>dummy@gmail.com</p>
-                        </div>
-                    </td>
-
-                    <td class="people-des">
-                        <h5>Devloper</h5>
-                        <p>Full-Stack</p>
-                    </td>
-
-                    <td class="active">
-                        <p>Active</p>
-                    </td>
-                    <td class="role">Owner</td>
-
-                    <td class="edit"><a href="#">Edit</a></td>
-                </tr>
-                <tr>
-                    <td class="people">
-                        <img src="" alt="">
-                        <div class="people-de">
-                            <h5>Vamsi Karri</h5>
-                            <p>dummy@gmail.com</p>
-                        </div>
-                    </td>
-
-                    <td class="people-des">
-                        <h5>Devloper</h5>
-                        <p>Full-Stack</p>
-                    </td>
-
-                    <td class="active">
-                        <p>Active</p>
-                    </td>
-                    <td class="role">Owner</td>
-
-                    <td class="edit"><a href="#">Edit</a></td>
-                </tr>
-                <tr>
-                    <td class="people">
-                        <img src="" alt="">
-                        <div class="people-de">
-                            <h5>Vamsi Karri</h5>
-                            <p>dummy@gmail.com</p>
-                        </div>
-                    </td>
-
-                    <td class="people-des">
-                        <h5>Devloper</h5>
-                        <p>Full-Stack</p>
-                    </td>
-
-                    <td class="active">
-                        <p>Active</p>
-                    </td>
-                    <td class="role">Owner</td>
-
-                    <td class="edit"><a href="#">Edit</a></td>
-                </tr>
             </tbody>
         </table>
      </dir>
 </section>
    <script>
     $('#menu-btn').click(function(){
-        $('#menu').toggleClass('active')
+        $('#menu').toggleClass()
     })
+
+
+   
+fetch('https://localhost:3000/users').then((data)=>{
+   console.log(data)
+    return data.json();
+}).then((objectData)=>{
+    console.log(objectData)
+    let tableData="";
+    objectData.forEach((values)=>{
+        console.log(values.title)
+        // tableData+=`<td class="people">
+        //                 <img src="${values.image}" alt="">
+        //                 <div class="people-de">
+        //                     <h5>${values.firstname}+${values.lastname}</h5>
+        //                     <p>${values.email}</p>
+        //                 </div>
+        //             </td>
+
+        //             <td class="people-des">
+        //                 <h5>${values.role}</h5>
+        //                 <p>Full-Stack</p>
+        //             </td>
+
+        //             <td class="active">
+        //                 <p>${values.status}</p>
+        //             </td>
+        //             <td class="role">${values.role}</td>
+
+        //             <td class="edit"><a href="#">Edit</a></td>
+        // `
+    })
+})
+
    </script> 
 </body>
 </html>

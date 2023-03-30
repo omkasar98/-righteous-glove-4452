@@ -1,6 +1,9 @@
 
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap'); */
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 
 
    *{
@@ -11,7 +14,7 @@
     width: 100%;
     background:#E5E7EB;
     position: relative;
-    font-family: 'Popins',sans-serif;
+    font-family: 'Popp ins',sans-serif;
     display: flex;
    } 
 
