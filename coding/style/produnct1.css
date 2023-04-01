@@ -61,7 +61,7 @@
     text-align: left;
     
   }
-  .main .but.active ~ .li {
+  .but.active ~ .li {
     /* here is toggled properties that is done after clicking the button */
    height: auto;
    padding: 12px;
