@@ -1,4 +1,4 @@
-let url = "http://localhost:3000/reels";
+let url = "http://localhost:3000/baits";
 fetchData();
 let btn = document.getElementById("pagination");
 let detail = document.getElementById("detail");
