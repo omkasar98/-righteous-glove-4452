@@ -1,15 +1,22 @@
 .container {
-    width: 45%;
-    margin: 0 auto;
-}
-#container{
     width: 50%;
-    /* border: 2px solid red; */
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: auto;
-    padding: 2%;
-    border-radius: 10px;
+    /* align-items: center; */
+
+    /* border: 2px solid red; */
 }
+ #container{
+    width: 100%;
+    /* background-color: rgb(122, 122, 249); */
+    /* border: 2px solid green; */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    margin: auto;
+    
+    
+   
+}
+  
+
 h1 {
     text-align: center;
 }
@@ -44,4 +51,4 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: rgb(116, 43, 226);
-}
+} 
