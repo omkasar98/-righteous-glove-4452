@@ -263,17 +263,19 @@
     border-radius: 5px;
     border-radius: 1px solid;
   }
- .buy{
+  .buy{
     border: 1px solid;
     margin: 12px;
     border-radius: 5px;
-    background-color: rgb(239, 105, 105);
+    background-color: rgb(0, 121, 250);
  }
  .cart{
     border: 1px solid;
     margin: 12px;
     border-radius: 5px;
-    background-color:rgb(32, 109, 241) ;
+    background-color:#ffe100
+
+    ;
  }
  .buy:hover{
     background-color:rgb(241, 178, 32) ;

@@ -202,6 +202,7 @@
   /* border: 2px solid ; */
   padding: 12px;
   align-items: center;
+  background-color: #fff;
 }
 #product>div>button{
 }
@@ -268,27 +269,35 @@
     margin: 12px;
   }
   .he{
-    background-color: aqua;
+    background-color: rgb(96, 231, 231);
     border-radius: 5px;
-    border-radius: 1px solid;
+    /* border-radius: 1px solid; */
+    border: none;
+
   }
  .buy{
     border: 1px solid;
     margin: 12px;
     border-radius: 5px;
-    background-color: rgb(239, 105, 105);
+    background-color:#2ecc71;
+   
+    border:none;
  }
  .cart{
     border: 1px solid;
     margin: 12px;
     border-radius: 5px;
-    background-color:rgb(43, 121, 255) ;
+    background-color: #eeafaf;
+    border:none;
+
+
+    
  }
  .buy:hover{
-    background-color:rgb(241, 178, 32) ;
+    background-color: #00ff6a;
  }
  .cart:hover{
-    background-color:rgb(32, 241, 53) ;
+    background-color:rgb(241, 97, 97) ;
  }
  .page{
     border: 1px solid;
