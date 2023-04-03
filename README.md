@@ -32,5 +32,5 @@ The following individuals worked on the development of Boat & Bait:
 Vamsi Karri
 Ranjith Kumar Raj
 Jitu Gandhare
-Conclusion
+Conclusion 
 Boat & Bait is a feature-rich clone website for Bass Pro Shops, built using the latest web development technologies. With its user-friendly interface and secure payment gateway integration, it provides an enjoyable shopping experience for all fishing enthusiasts.
