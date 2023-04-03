@@ -1,6 +1,5 @@
 #Boat & Bait
-     --Boat & Bait is a clone website for Bass Pro Shops, created by Vamsi Karri, Ranjith Kumar Raj, and Jitu Gandhare. The website is built using HTML 5, CSS, and          --Vanilla JavaScript.
-
+         -Boat & Bait is a clone website for Bass Pro Shops.
 
    ##Boat & Bait offers a range of features for its users, including:
 
