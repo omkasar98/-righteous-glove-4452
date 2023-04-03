@@ -1,4 +1,4 @@
-#Boat & Bait
+#Boat & Bait:
          -Boat & Bait is a clone website for Bass Pro Shops.
 
    ##Boat & Bait offers a range of features for its users, including:
