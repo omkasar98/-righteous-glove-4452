@@ -15,7 +15,7 @@ form.addEventListener('submit', (event) => {
   image: image.value
 };
 
-fetch('http://localhost:3000/products?sort=desc', {
+fetch('https://boaitandbaits-backend.onrender.com/products?sort=desc', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ const cardsContainer = document.getElementById("card-container");
 
 // const container = document.querySelector('.container');
 
-fetch('http://localhost:3000/products')
+fetch('https://boaitandbaits-backend.onrender.com/products')
   .then(response => response.json())
   .then((products) => {
     products.forEach(product => {
@@ -69,7 +69,7 @@ fetch('http://localhost:3000/products')
   // delete card functionality
   
   function deleteData(id) {
-  fetch(`http://localhost:3000/products/${id}`, {
+  fetch(`https://boaitandbaits-backend.onrender.com/products/${id}`, {
     method: 'DELETE'
   })
   .then(response => {

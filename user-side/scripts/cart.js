@@ -1,5 +1,5 @@
 // API endpoint to fetch product data
-const apiEndpoint = 'http://localhost:3000/cart';
+const apiEndpoint = 'https://boaitandbaits-backend.onrender.com/cart';
   var product_id=null;
 // Function to fetch product data from API
 async function fetchProducts() {

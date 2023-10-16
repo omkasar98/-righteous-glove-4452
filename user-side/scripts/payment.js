@@ -33,7 +33,7 @@ let payment = document.getElementById("payment");
     alert("Your order has been placed")
     window.location.href="/index.html";
    
-    fetch(" http://localhost:3000/pay", {
+    fetch("https://boaitandbaits-backend.onrender.com/pay", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body:JSON.stringify(obj)

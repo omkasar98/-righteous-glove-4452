@@ -5,7 +5,7 @@ $('#menu-btn').click(function(){
 //--------------------------- logout---------------------------------------//
 
 
-fetch('http://localhost:3000/users')
+fetch('https://boaitandbaits-backend.onrender.com/users')
 .then(response => response.json())
 .then(data => {
 // console.log(data)

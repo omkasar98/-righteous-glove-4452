@@ -1,4 +1,4 @@
-let url = "http://localhost:3000/reels";
+let url = "https://boaitandbaits-backend.onrender.com/reels";
 fetchData();
 let btn = document.getElementById("pagination");
 let detail = document.getElementById("detail");
@@ -72,7 +72,7 @@ function appendData(data) {
         image: element.image,
         id: element.id,
       };
-      fetch("http://localhost:3000/cart",{
+      fetch("https://boaitandbaits-backend.onrender.com/cart",{
         method:"POST",
         headers:{"content-Type":"application/json"},
         body:JSON.stringify(obj)
@@ -95,7 +95,7 @@ function appendData(data) {
         image: element.image,
         id: element.id,
       };
-      fetch("http://localhost:3000/buy",{
+      fetch("https://boaitandbaits-backend.onrender.com/buy",{
         method:"POST",
         headers:{"content-Type":"application/json"},
         body:JSON.stringify(obj)
