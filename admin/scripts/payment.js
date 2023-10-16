@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/payments')
+fetch('https://boaitandbaits-backend.onrender.com/payments')
 .then(response => response.json())
 .then(data => {
   // console.log(data)

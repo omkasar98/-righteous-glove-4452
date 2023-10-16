@@ -22,7 +22,7 @@ registerBtn.addEventListener('click', function(event) {
   };
 
   // Send a POST request to your API endpoint
-  fetch('http://localhost:3000/users', {
+  fetch('https://boaitandbaits-backend.onrender.com/users', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

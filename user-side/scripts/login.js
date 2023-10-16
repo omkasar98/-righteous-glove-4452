@@ -12,7 +12,7 @@ loginForm.addEventListener("submit", (event) => {
     window.location.href = "/admin//html/admin.html";
   } else {
     // Make a request to API to check if user exists
-    fetch("http://localhost:3000/users")
+    fetch("https://boaitandbaits-backend.onrender.com/users")
       .then((response) => response.json())
       .then((data) => {
         const user = data.find((user) => user.email === email && user.password === password);
