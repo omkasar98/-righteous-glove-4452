@@ -19,6 +19,7 @@
       -The following individuals worked on the development of Boat & Bait:
 
            -Vamsi Karri
+           -Omkar kasar
            -Ranjith Kumar Raj
            -Jitu Gandhare
  
